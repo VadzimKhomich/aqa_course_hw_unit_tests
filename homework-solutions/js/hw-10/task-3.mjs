@@ -16,11 +16,27 @@
 */
 
 function getRandomArbitrary(min, max) {
-  return Math.random() * (max - min) + min;
+  return Math.floor(Math.random() * (max - min + 1)) + min
 }
 
 function uniqueRandomGenerator(n) {
-  // Ваш код
+  const numbers = []
+  while(numbers.length !== n) {
+    let number = getRandomArbitrary(1, n)
+    if(numbers.includes(number)) {
+      continue
+    } else {
+      numbers.push(number)
+    }
+  }
+
+  return () => {
+    if(!numbers.length) {
+      return 'All numbers were received' 
+    } else {
+      return numbers.pop()
+    }
+  }
 }
 
 export { uniqueRandomGenerator };
