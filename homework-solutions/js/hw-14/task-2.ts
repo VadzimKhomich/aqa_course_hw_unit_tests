@@ -7,7 +7,7 @@
 
 
 function customMap<T, U>(array: T[], callback: (element: T, index: number, array: T[]) => U): U[] {
-    const result = []
+    const result: U[] = []
     for( let i = 0; i < array.length; i++) {
         result.push(callback(array[i], i, array))
     }
