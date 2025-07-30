@@ -38,6 +38,7 @@ console.log(item_4)
 console.log(item_3 + item_4)
 
 // 14. Вывести в консоль умножение item_3 и item_4.
+console.log(item_3 * item_4)
 
 // 15. Создать переменную “item_5”
 let item_5
