@@ -4,3 +4,5 @@
 n + nn + nnn, где n не перемножаются, а конкатенируются
 
 */
+let n = 5
+console.log(n + +(String(n) + String(n)) + +(String(n) + String(n) + String(n)))
